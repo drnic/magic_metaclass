@@ -1,33 +1,41 @@
 h1. magic_metaclass
 
-h1. &#x2192; 'magic_metaclass'
+h1. &#x2192; PersonMetaclass
 
 
 h2. What
 
+For each Ruby class, say <code>Person</code>, its matching explicit metaclass is now available via a similarly named constant <code>PersonMetaclass</code>.
+
+<pre syntax="ruby">
+class Person; end
+Person
+# => Person
+PersonMetaclass
+# => #<Class:Person>
+
+metaclass = class << Person; self; end
+PersonMetaclass == metaclass
+# => true
+</pre>
 
 h2. Installing
 
 <pre syntax="ruby">sudo gem install magic_metaclass</pre>
 
-h2. The basics
-
-
-h2. Demonstration of usage
-
+Within your application, add the following line:
+  
+<pre syntax="ruby">require 'magic_metaclass'</pre>
 
 
 h2. Forum
 
-"http://groups.google.com/group/magic_metaclass":http://groups.google.com/group/magic_metaclass
-
-TODO - create Google Group - magic_metaclass
+"http://groups.google.com/group/magicmodels":http://groups.google.com/group/magicmodels
 
 h2. How to submit patches
 
 Read the "8 steps for fixing other people's code":http://drnicwilliams.com/2007/06/01/8-steps-for-fixing-other-peoples-code/ and for section "8b: Submit patch to Google Groups":http://drnicwilliams.com/2007/06/01/8-steps-for-fixing-other-peoples-code/#8b-google-groups, use the Google Group above.
 
-The trunk repository is <code>svn://rubyforge.org/var/svn/magic_metaclass/trunk</code> for anonymous access.
 
 h2. License
 

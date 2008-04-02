@@ -35,10 +35,26 @@
       <p>Get Version</p>
       <a href="http://rubyforge.org/projects/magic_metaclass" class="numbers">1.0.0</a>
     </div>
-    <h1>&#x2192; &#8216;magic_metaclass&#8217;</h1>
+    <h1>&#x2192; PersonMetaclass</h1>
 
 
 	<h2>What</h2>
+
+
+	<p>For each Ruby class, say <code>Person</code>, its matching explicit metaclass is now available via a similarly named constant <code>PersonMetaclass</code>.</p>
+
+
+	<p><pre class='syntax'>
+<span class="keyword">class </span><span class="class">Person</span><span class="punct">;</span> <span class="keyword">end</span>
+<span class="constant">Person</span>
+<span class="comment"># =&gt; Person</span>
+<span class="constant">PersonMetaclass</span>
+<span class="comment"># =&gt; #&lt;Class:Person&gt;</span>
+
+<span class="ident">metaclass</span> <span class="punct">=</span> <span class="keyword">class </span><span class="punct">&lt;&lt;</span> <span class="constant">Person</span><span class="punct">;</span> <span class="constant">self</span><span class="punct">;</span> <span class="keyword">end</span>
+<span class="constant">PersonMetaclass</span> <span class="punct">==</span> <span class="ident">metaclass</span>
+<span class="comment"># =&gt; true</span>
+</pre></p>
 
 
 	<h2>Installing</h2>
@@ -47,28 +63,22 @@
 	<p><pre class='syntax'><span class="ident">sudo</span> <span class="ident">gem</span> <span class="ident">install</span> <span class="ident">magic_metaclass</span></pre></p>
 
 
-	<h2>The basics</h2>
+	<p>Within your application, add the following line:</p>
 
 
-	<h2>Demonstration of usage</h2>
+	<pre class='syntax'><span class="ident">require</span> <span class="punct">'</span><span class="string">magic_metaclass</span><span class="punct">'</span></pre>
 
 
 	<h2>Forum</h2>
 
 
-	<p><a href="http://groups.google.com/group/magic_metaclass">http://groups.google.com/group/magic_metaclass</a></p>
-
-
-	<p><span class="caps">TODO</span> &#8211; create Google Group &#8211; magic_metaclass</p>
+	<p><a href="http://groups.google.com/group/magicmodels">http://groups.google.com/group/magicmodels</a></p>
 
 
 	<h2>How to submit patches</h2>
 
 
 	<p>Read the <a href="http://drnicwilliams.com/2007/06/01/8-steps-for-fixing-other-peoples-code/">8 steps for fixing other people&#8217;s code</a> and for section <a href="http://drnicwilliams.com/2007/06/01/8-steps-for-fixing-other-peoples-code/#8b-google-groups">8b: Submit patch to Google Groups</a>, use the Google Group above.</p>
-
-
-	<p>The trunk repository is <code>svn://rubyforge.org/var/svn/magic_metaclass/trunk</code> for anonymous access.</p>
 
 
 	<h2>License</h2>
