@@ -2,9 +2,9 @@ require 'magic_metaclass/version'
 
 AUTHOR = 'Dr Nic Williams'  # can also be an array of Authors
 EMAIL = "drnicwilliams@gmail.com"
-DESCRIPTION = "description of gem"
+DESCRIPTION = "The metaclass/singleton/eigenclass of classes is available via <classname>Metaclass, e.g. PersonMetaclass"
 GEM_NAME = 'magic_metaclass' # what ppl will type to install your gem
-RUBYFORGE_PROJECT = 'magic_metaclass' # The unix name for your project
+RUBYFORGE_PROJECT = 'magicmodels' # The unix name for your project
 HOMEPATH = "http://#{RUBYFORGE_PROJECT}.rubyforge.org"
 DOWNLOAD_PATH = "http://rubyforge.org/projects/#{RUBYFORGE_PROJECT}"
 

@@ -6,8 +6,8 @@ Rakefile
 config/hoe.rb
 config/requirements.rb
 lib/magic_metaclass.rb
+lib/magic_metaclass/module.rb
 lib/magic_metaclass/version.rb
-lib/module.rb
 log/debug.log
 script/destroy
 script/generate
