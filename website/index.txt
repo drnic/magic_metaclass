@@ -13,6 +13,13 @@ Person
 # => Person
 PersonMetaclass
 # => #<Class:Person>
+PersonClass
+# => #<Class:Person>
+PersonEigenclass
+# => #<Class:Person>
+PersonEigen
+# => #<Class:Person>
+
 
 metaclass = class << Person; self; end
 PersonMetaclass == metaclass

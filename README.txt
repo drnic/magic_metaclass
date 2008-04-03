@@ -11,6 +11,12 @@ For each Ruby class, say +Person+, its matching explicit metaclass is now availa
     # => Person
     PersonMetaclass
     # => #<Class:Person>
+    PersonClass
+    # => #<Class:Person>
+    PersonEigenclass
+    # => #<Class:Person>
+    PersonEigen
+    # => #<Class:Person>
 
     metaclass = class << Person; self; end
     PersonMetaclass == metaclass

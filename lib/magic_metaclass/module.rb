@@ -7,14 +7,14 @@ class Module
     rescue
     end
     class_name = class_id.to_s
-    unless class_name =~ /([A-Za-z_]+)Metaclass/
-      raise NameError.new("uninitialized constant #{class_id}") if @magic_schema.models.enquired? class_id
+    unless class_name =~ /([A-Za-z_]+)(Metaclass|Class|Eigenclass|Eigen)/
+      raise NameError.new("uninitialized constant #{class_id}")
     end
     base_class_name = $1
     begin
       base_class = self.const_get base_class_name
     rescue
-      raise NameError.new("uninitialized constant #{class_id}") if @magic_schema.models.enquired? class_id
+      raise NameError.new("uninitialized constant #{class_id}")
     end
     metaclass = class << base_class; self; end
     self.const_set class_name, metaclass
