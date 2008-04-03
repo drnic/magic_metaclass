@@ -14,7 +14,7 @@ require 'erb'
 require File.dirname(__FILE__) + '/../lib/magic_metaclass/version.rb'
 
 version  = MagicMetaclass::VERSION::STRING
-download = 'http://rubyforge.org/projects/magic_metaclass'
+download = 'http://rubyforge.org/projects/magicmodels'
 
 class Fixnum
   def ordinal
