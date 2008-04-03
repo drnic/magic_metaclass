@@ -25,16 +25,23 @@ class TestMagicMetaclass < Test::Unit::TestCase
     assert_equal(metaclass, PersonEigenclass)
     assert_equal(metaclass, PersonEigen)
   end
-  
+
   def test_badclass
     assert_raise(NameError) { PersonXXX }
     assert_raise(NameError) { XXX }
   end
-  
+
   def test_metaclass_name_but_no_actual_class
     assert_raise(NameError) { SomeclassMetaclass }
     assert_raise(NameError) { SomeclassClass }
     assert_raise(NameError) { SomeclassEigen }
     assert_raise(NameError) { SomeclassEigenclass }
+  end
+
+  def test_almost_good_name
+    assert_raise(NameError) { PersonMetaclassx }
+    assert_raise(NameError) { PersonClassx }
+    assert_raise(NameError) { PersonEigenx }
+    assert_raise(NameError) { PersonEigenclassx }
   end
 end

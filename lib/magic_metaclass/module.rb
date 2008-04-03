@@ -7,7 +7,7 @@ class Module
     rescue
     end
     class_name = class_id.to_s
-    unless class_name =~ /([A-Za-z_]+)(Metaclass|Class|Eigenclass|Eigen)/
+    unless class_name =~ /\A([A-Za-z_]+)(Metaclass|Class|Eigenclass|Eigen)\Z/
       raise NameError.new("uninitialized constant #{class_id}")
     end
     base_class_name = $1
